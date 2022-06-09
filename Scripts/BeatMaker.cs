@@ -1,11 +1,14 @@
-using UnityEngine;
 
+/// <summary>
+/// 拍動イベント用のデリゲート
+/// </summary>
+/// <param name="packet">今回の拍動に関するパケット</param>
 public delegate void BeatHandler(BeatPacket packet);
 
 /// <summary>
 /// 拍動を元にテンポの計算、イベントの発行を行うクラス
 /// </summary>
-public class BeatMaker : MonoBehaviour
+public class BeatMaker
 {
     /// <summary>
     /// 拍動時のイベントハンドラ
@@ -16,7 +19,7 @@ public class BeatMaker : MonoBehaviour
     /// 拍動の回数。1-indexed
     /// </summary>
     int beatCount;
-    virtual protected void Awake()
+    public BeatMaker()
     {
         // 空関数で初期化することでnullを回避する
         beatHandler = (x) => { };

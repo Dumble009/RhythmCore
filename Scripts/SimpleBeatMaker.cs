@@ -9,10 +9,9 @@ public class SimpleBeatMaker : BeatMaker
     /// 実行開始時から最後の拍動が打たれた時までの経過秒数
     /// </summary>
     float lastBeatTime;
-    protected override void Awake()
+    public SimpleBeatMaker() : base()
     {
-        base.Awake();
-        lastBeatTime = Time.realtimeSinceStartup;
+        lastBeatTime = 0.0f;
     }
     protected override float CalcTempo()
     {
