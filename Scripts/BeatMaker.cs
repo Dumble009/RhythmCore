@@ -16,7 +16,7 @@ public class BeatMaker : MonoBehaviour
     /// 拍動の回数。1-indexed
     /// </summary>
     int beatCount;
-    private void Awake()
+    virtual protected void Awake()
     {
         // 空関数で初期化することでnullを回避する
         beatHandler = (x) => { };
