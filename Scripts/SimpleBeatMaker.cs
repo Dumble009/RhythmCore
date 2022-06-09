@@ -9,14 +9,15 @@ public class SimpleBeatMaker : BeatMaker
     /// 実行開始時から最後の拍動が打たれた時までの経過秒数
     /// </summary>
     float lastBeatTime;
-    public SimpleBeatMaker() : base()
+    public SimpleBeatMaker(ITimer _timer) : base(_timer)
     {
         lastBeatTime = 0.0f;
     }
     protected override float CalcTempo()
     {
-        float tempo = Time.realtimeSinceStartup - lastBeatTime;
-        lastBeatTime = Time.realtimeSinceStartup;
+        float currentTime = timer.GetCurrentTime();
+        float tempo = currentTime - lastBeatTime;
+        lastBeatTime = currentTime;
 
         return tempo;
     }

@@ -16,15 +16,22 @@ public class BeatMaker
     BeatHandler beatHandler;
 
     /// <summary>
+    /// 実時間を取得するために使用されるタイマー
+    /// </summary>
+    protected ITimer timer;
+
+    /// <summary>
     /// 拍動の回数。1-indexed
     /// </summary>
     int beatCount;
-    public BeatMaker()
+    public BeatMaker(ITimer _timer)
     {
         // 空関数で初期化することでnullを回避する
         beatHandler = (x) => { };
 
         beatCount = 0;
+
+        timer = _timer;
     }
 
     /// <summary>
