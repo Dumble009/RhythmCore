@@ -1,7 +1,7 @@
 /// <summary>
 /// 拍動時のイベントの引数として渡されるパケット
 /// </summary>
-public struct BeatPacket
+public class BeatPacket
 {
     float tempo;
     /// <summary>
