@@ -62,7 +62,8 @@ crashlytics-build.properties
 
 .DS_Store
 
-# draw.io files
+# design meta files
 *.drawio.meta
 *.drawio.bkp
 *.drawio.bkp.meta
+Designs/*.txt.meta
