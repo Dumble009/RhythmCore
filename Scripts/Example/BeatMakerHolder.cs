@@ -19,6 +19,11 @@ public class BeatMakerHolder : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        beatMaker = new SimpleBeatMaker(new UnityTimer());
+    }
+
     /// <summary>
     /// 拍動の発生
     /// </summary>
