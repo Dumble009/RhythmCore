@@ -26,6 +26,9 @@ public class SimpleBeatMakerTest
     /// </summary>
     const float allowedRelativeError = 10e-6f;
 
+    /// <summary>
+    /// テスト変数の初期化を行う
+    /// </summary>
     [SetUp]
     public void Init()
     {
