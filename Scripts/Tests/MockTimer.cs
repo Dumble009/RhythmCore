@@ -11,6 +11,10 @@ internal class MockTimer : ITimer
     /// </summary>
     public float CurrentTime
     {
+        get
+        {
+            return currentTime;
+        }
         set
         {
             currentTime = value;
