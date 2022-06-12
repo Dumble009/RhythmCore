@@ -30,7 +30,7 @@ internal class MockTimer : ITimer
     /// 設定されたcurrentTimeをそのまま返す
     /// </summary>
     /// <returns>ダミーの現在時間</returns>
-    float ITimer.GetCurrentTime()
+    public float GetCurrentTime()
     {
         return currentTime;
     }
