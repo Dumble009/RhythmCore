@@ -44,7 +44,12 @@ public class BeatMaker
         beatCount++;
         packet.BeatCount = beatCount;
         packet.Tempo = CalcTempo();
-        beatHandler(packet);
+
+        // 1回目の拍動からはテンポが計算できないのでイベントの発行は2回目の拍動から始める
+        if (beatCount > 1)
+        {
+            beatHandler(packet);
+        }
     }
 
     /// <summary>
